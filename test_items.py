@@ -9,6 +9,5 @@ def test_find_button_basket(browser):
     try:
         button = browser.find_element_by_css_selector('.btn-add-to-basket')
     except NoSuchElementException:
-        print("---i do dot see this button----")
-    buttontext = button.text
-    print("--------{}----------".format(buttontext))
+        assert "---i do dot see this button----"
+    assert "--------{}----------".format(button.text)
